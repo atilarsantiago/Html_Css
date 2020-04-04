@@ -1,0 +1,113 @@
+
+/* Tudo que é feito no body, como posições e etc é replicado nas box abaixo, de acordo com a hierarquia no html */
+/*
+body{
+    display: flex;
+    flex-direction: column;
+
+    /* Dizer que tudo que está dentro do body deve ficar centralizado é uma estratégia*/
+    /*
+    justify-content: center;
+    align-items: center;
+
+/*Signifca 100 viewport = 100% da visão, ou seja, todo body tem visão da tela toda*/
+/*    height: 100vh; 
+/*Body já vem com margem de 8px, por isso preciso zerá-lo*/
+/*    margin: 0; */
+/*}*/
+
+
+/* Fazendo referência a <div> que tem no index.html
+Podendo ter várias opções de alteração, seja no texto seja na sua "box" */
+
+div {
+/* Tudo que é feito nessa box, como bordas e margens é replicado nas box filhas */
+    
+    /* content: width(largura) & height(altura) */
+    width: 500px;
+    height: 500px;
+    
+    /* overflow: hidden;/*Faz com que qualquer coisa que passe do width/height da div pai não seja mostrado */
+    /*Com essa propriedade "border-box" os padding respeitarão o width/height como limites
+    o padrão é "content-box", que soma os padding ao box*/
+    box-sizing: border-box;
+    
+    /* margin auto para top/bottom não funciona, apenas % ou px */
+    margin: 20% auto; 
+
+    
+
+}
+
+    div.content{/*Essa Div é filha da Div principal acima*/
+
+/* Características do que está dentro dessa div */
+        background-color: red;
+        font-size: 28px;
+        color: white;
+        text-align: center;
+
+/* padding: Preenchimento */
+
+    /* Forma short hand */
+        /* padding: top right bottom left (com 4 opções)*/
+        /* padding: top right-left bottom (com 3 opções, right/left terão mesmo valor)*/
+        /*padding: top-bottom right-left*(com 2 opções, top/bottom terão mesmo valor, right/left terão mesmo valor)*/
+        
+        padding: 25px;
+
+            /* Forma long hand */
+        /*
+        padding-top: 100px; /*Distância do contêudo da div para o top
+        padding-right: 200px;/*Distância do contêudo da div para direita
+        padding-bottom: 100px;/*Se o padding foi maior que a box ele vai transbodar, mesmo com "border-box"
+        padding-left: 200px;
+        */
+
+/* Border: borda */
+
+        /* especificando qual borda */
+        border-left-width: 20px;
+        border-left-style: dotted;
+        border-left-color: rgba(red, green, blue, alpha) ; /*poderia ser (0,0,0,0.8)*/
+            
+        /* Shorthand do border do top*/
+                /* border-top: 20px dotted rgba(0,0,0,0.8); */
+            /* Para todas as bordas */
+                /* border-style: groove; */
+                /* border-color: azure; */
+    
+/* Margin: Margem */
+            /* Segue as mesmas características do padding para o shorthand e etc */
+           /* margin-top: 100px;
+            margin-left: 100px;
+            margin-bottom: 50px;*/
+            
+
+    }
+    section{ /*Outro elemento que pode ter suas características modificadas pelo css*/
+
+    background-color: yellowgreen;
+     width: 500px;
+     height: 200px; 
+
+    margin: 0 auto;/*margin:top-bottom right-left*/
+    /*Se o margin do elemento acima for <= ao desse elemento as margem não serão somadas, 
+    no máximo fará a diferença entre elas*/
+    margin-top: 70px;
+        
+    }
+
+span{
+
+/*Ao invés do padrão inline, o inline-block nos permite usar os métodos das div também
+    como os padding, margin e etc..  */
+/* Além disso o inline-block deixa espaço para que eu coloque conteúdos lado a lado */
+    display: inline-block;
+
+    background-color: black;
+    color: white;
+
+    width: 500px;
+
+}

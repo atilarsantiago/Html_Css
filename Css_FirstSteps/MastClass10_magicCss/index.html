@@ -1,0 +1,43 @@
+<!-- Box Model
+- Os elementos HTML são enxergados  como caixas retangulares
+
+Compostas de 4 partes, que definem um limite para o conteúdo (content)
+
+1. Margin (Top, bottom. right. left)
+2. Border (top|right|bottom|left, style, width, color)
+3. Padding (top|right|bottom|left)
+4. Content (text, image, video)
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- Existe um hierarquia que é seguida pelas "box", como é possível ver
+Body > qualquer div dentro > qualquer div dentro desse div > ...  -->
+<body>
+<!-- <Div> são como "caixas" que são utilizadas quais outras coisas que não fazem parte
+    do html semântico, como <head><body> e etc... 
+      -->
+    <div>
+        <div class="content"> <!--Essa caixa'e filha da caixa div-->
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Impedit pariatur quae delectus assumenda ratione enim, 
+        doloribus quam nulla incidunt velit architecto. Facilis saepe vel 
+        enim vitae exercitationem nihil aliquid ab?</div>
+    
+    </div>
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas iusto minima inventore enim et architecto illum, ipsa sed velit? Quas, ullam sequi debitis provident quam accusantium. Saepe odio maiores molestias?
+    </section>
+    <span>
+        loren
+    </span>
+    <a href="#">Ao lado do Span</a>
+</body>
+</html>
