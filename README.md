@@ -1,2 +1,2 @@
 # Html_Css
-Conjunto de Estudos sobre HTML e CSS
+Set of practical studies that I've been developing on html and css.
